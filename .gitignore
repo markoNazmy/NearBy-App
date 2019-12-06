@@ -2,17 +2,12 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+## Build generated
 build/
 DerivedData/
-*.moved-aside
+generated/
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -21,11 +16,15 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
-
-## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -40,12 +39,6 @@ playground.xcworkspace
 # Packages/
 # Package.pins
 # Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
 .build/
 
 # CocoaPods
@@ -54,37 +47,51 @@ playground.xcworkspace
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# Accio dependency management
-Dependencies/
-.accio/
+Pods/
 
 # fastlane
 #
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
+fastlane/screenshots
 fastlane/test_output
+fastlane/certificates
+fastlane/provisioning
+Fastlane/artifacts
 
-# Code Injection
-#
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
+\.DS_Store
 
-iOSInjectionProject/
+## IntelliJ
+.idea/
+HUB.xcodeproj/project_BACKUP_56961.pbxproj
+HUB.xcodeproj/project_BACKUP_59470.pbxproj
+HUB.xcodeproj/project_BASE_56961.pbxproj
+HUB.xcodeproj/project_BASE_59470.pbxproj
+HUB.xcodeproj/project_LOCAL_56961.pbxproj
+HUB.xcodeproj/project_LOCAL_59470.pbxproj
+HUB.xcodeproj/project_REMOTE_56961.pbxproj
+HUB.xcodeproj/project_REMOTE_59470.pbxproj
+Sources/Common/Route/Route.swift.orig
+Sources/Modules/Profile/View Controller/ProfileViewController.swift.orig
+HUB.xcodeproj/project.pbxproj.orig
+Sources/Modules/Groups/Model/Groups_BACKUP_62321.swift
+Sources/Modules/Groups/Model/Groups_BACKUP_62458.swift
+Sources/Modules/Groups/Model/Groups_BACKUP_62669.swift
+Sources/Modules/Groups/Model/Groups_BASE_62321.swift
+Sources/Modules/Groups/Model/Groups_BASE_62458.swift
+Sources/Modules/Groups/Model/Groups_BASE_62669.swift
+Sources/Modules/Groups/Model/Groups_LOCAL_62321.swift
+Sources/Modules/Groups/Model/Groups_LOCAL_62458.swift
+Sources/Modules/Groups/Model/Groups_LOCAL_62669.swift
+Sources/Modules/Groups/Model/Groups_REMOTE_62321.swift
+Sources/Modules/Groups/Model/Groups_REMOTE_62458.swift
+Sources/Modules/Groups/Model/Groups_REMOTE_62669.swift
+Sources/Modules/Groups/Repository/GroupsRepository_BACKUP_63027.swift
+Sources/Modules/Groups/Repository/GroupsRepository_BASE_63027.swift
+Sources/Modules/Groups/Repository/GroupsRepository_LOCAL_63027.swift
+Sources/Modules/Groups/Repository/GroupsRepository_REMOTE_63027.swift
