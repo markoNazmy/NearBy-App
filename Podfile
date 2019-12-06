@@ -7,7 +7,6 @@ target 'NearBy App' do
 
   pod 'SwiftLint'
   pod 'SwiftFormat'
-  pod 'R.swift'
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'

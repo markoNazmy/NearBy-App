@@ -21,7 +21,7 @@ class NetworkManager {
     }
     
     var baseUrl: String {
-        return "https://api.foursquare.com/v2/"
+        return "https://api.foursquare.com/v2"
     }
     
     var defaultHeaders: [String: String] {
@@ -40,7 +40,6 @@ class NetworkManager {
     static let shared = NetworkManager()
     
     func start<T: Mappable>(request: Request, result: @escaping MappedResult<T>) {
-        // This "can" be more generic by including it as part of the request but using JSON in the body is a safe assumption
         let encoding: ParameterEncoding
         if request.method == .post {
             encoding = JSONEncoding.default

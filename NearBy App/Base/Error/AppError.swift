@@ -28,7 +28,7 @@ enum AppError: Error {
                 switch reason {
                 case .unacceptableStatusCode(let code):
                     switch code {
-                    case 401:
+                    case 401, 403:
                         self = .authorization
                     default:
                         self = .unknown
