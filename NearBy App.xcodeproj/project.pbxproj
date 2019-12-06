@@ -142,6 +142,27 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		70B15627239AA6E400918881 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		70B15629239AA6F900918881 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		70B1562A239AA70800918881 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
 		70CA8633239977790066EA88 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +248,9 @@
 		70CA8676239991F60066EA88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				70B1562A239AA70800918881 /* Use Case */,
+				70B15629239AA6F900918881 /* Repository */,
+				70B15627239AA6E400918881 /* Request */,
 			);
 			path = Model;
 			sourceTree = "<group>";

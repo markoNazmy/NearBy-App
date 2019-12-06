@@ -21,7 +21,7 @@ class NetworkManager {
     }
     
     var baseUrl: String {
-        return "https://gateway.marvel.com:443/v1/public"
+        return "https://api.foursquare.com/v2/"
     }
     
     var defaultHeaders: [String: String] {
@@ -86,17 +86,15 @@ class NetworkManager {
     /// Prefers the request base URL over the client's in case it's provided.
     private func fullUrlString(fromRequest request: Request) -> URLConvertible {
         // Request base URL should overrides client's, if any.
-        guard !request.path.contains("http") else { // swiftlint:disable:this force_https
-            return request.path
-        }
         
         // Base URL should be defined in the client if not already in the request.
         
-        let publicKey = "8eab81d127ba8a6cbcfd0f82057730e6"
-        let privateKey = "234b9c03b0df4bb447b1f3f8a3139cc692c2c1f3"
-        let ts = NSDate().timeIntervalSince1970.description
-        let hash = ""
-        let staticQueryParams = "\(request.path.contains("?") ? "&": "?")ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
+        let client_id = "BRF3IBSAYGRNG4RZSSVITHR3VITLT1O2N0TJA2Y0WZLOVMWA"
+        let client_secret = "E1B2IBTMKEPS3MXNDNQFHLWGUJUO41NBVBYSTTM41PDQMS0Q"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyymmdd"
+        let todayDate = dateFormatter.string(from: Date())
+        let staticQueryParams = "\(request.path.contains("?") ? "&": "?")client_id=\(client_id)&client_secret=\(client_secret)&v=\(todayDate)"
         
         if let baseUrl = request.baseUrl {
             return baseUrl + request.path + staticQueryParams
