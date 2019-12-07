@@ -28,7 +28,7 @@ class VenueTableViewCell: UITableViewCell, NibOwnerLoadable, Reusable {
     func configure(item: Items) {
         self.itemID = item.venue?.id ?? ""
         titleLabel.text = item.venue?.name ?? ""
-        let address: String = item.venue?.location?.formattedAddress.flatMap({ return "\($0) " }) ?? ""
+        let address: String = (item.venue?.location?.formattedAddress.flatMap({ return "\($0) " }) ?? "").replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "").replacingOccurrences(of: "\"", with: "")
         addressLabel.text = address
     }
     

@@ -24,14 +24,14 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVR-yZ-M4q">
-                        <rect key="frame" x="20" y="221.5" width="392" height="23"/>
+                        <rect key="frame" x="20" y="231.5" width="392" height="23"/>
                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBM-Kx-DFb">
-                        <rect key="frame" x="20" y="254.5" width="412" height="27.5"/>
-                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                        <rect key="frame" x="20" y="259.5" width="412" height="22.5"/>
+                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -40,7 +40,7 @@
                     <constraint firstAttribute="trailing" secondItem="dBM-Kx-DFb" secondAttribute="trailing" constant="20" id="C20-x3-VOo"/>
                     <constraint firstAttribute="bottom" secondItem="b2s-Ay-HDe" secondAttribute="bottom" constant="10" id="J8Z-FV-5KM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="sVR-yZ-M4q" secondAttribute="trailing" constant="20" id="Phi-v4-N0l"/>
-                    <constraint firstItem="dBM-Kx-DFb" firstAttribute="top" secondItem="sVR-yZ-M4q" secondAttribute="bottom" constant="10" id="Skn-IT-Pow"/>
+                    <constraint firstItem="dBM-Kx-DFb" firstAttribute="top" secondItem="sVR-yZ-M4q" secondAttribute="bottom" constant="5" id="Skn-IT-Pow"/>
                     <constraint firstItem="sVR-yZ-M4q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="X7Z-Yj-LcK"/>
                     <constraint firstItem="b2s-Ay-HDe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aDn-HF-NvO"/>
                     <constraint firstItem="b2s-Ay-HDe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bvR-Ze-2Xu"/>
