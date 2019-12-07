@@ -21,17 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
             
-            // rootViewController
-            let rootViewController = mainStoryboard.instantiateViewController(withIdentifier: "VenuesViewController") as! VenuesViewController
+            let rootViewController = mainStoryboard.instantiateInitialViewController() as! UINavigationController
             
-            // navigationController
-            let navigationController = UINavigationController(rootViewController: rootViewController)
-            
-            navigationController.isNavigationBarHidden = true // or not, your choice.
-            
-            // self.window
-            
-            window.rootViewController = navigationController
+            window.rootViewController = rootViewController
             
             self.window = window
             window.makeKeyAndVisible()

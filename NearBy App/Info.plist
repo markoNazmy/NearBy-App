@@ -60,6 +60,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app logs your location. It works best when you allow background location updates. Logged data never leaves the device.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app logs your location. It works best when you allow background location updates. Logged data never leaves the device.</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -71,5 +75,7 @@
 			<string>com.Marko.NearBy.NearBy-App</string>
 		</dict>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>light</string>
 </dict>
 </plist>
