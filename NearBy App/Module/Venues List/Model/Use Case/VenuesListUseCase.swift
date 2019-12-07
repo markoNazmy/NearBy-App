@@ -11,7 +11,7 @@ import Foundation
 class VenuesListUseCase {
     
     var currentPage: Int = 0
-    var pageSize: Int = 10
+    var pageSize: Int = 30
     
     func execute(latLang: String, shouldRefresh: Bool, callback: @escaping VenuesResult) {
         currentPage = shouldRefresh ? 1 : currentPage
