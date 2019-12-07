@@ -98,12 +98,11 @@ extension VenuesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: VenueTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         let item = presenter.items[indexPath.row]
-        let address: String = item.venue?.location?.formattedAddress.map({ return "\($0) " }) ?? ""
+        let address: String = item.venue?.location?.formattedAddress.flatMap({ return "\($0) " }) ?? ""
         if item.photoURL == nil {
             getItemPhoto(item: item)
         }
         cell.configure(title: "\(item.venue?.name ?? "")", address: address, imageID: item.photoURL)
-
         return cell
     }
     

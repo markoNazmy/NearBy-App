@@ -74,7 +74,9 @@ class VenuesPresenter {
         venuesPhotosUseCase.execute(venueId: item.venue?.id ?? "") {[weak self] (result) in
             switch result {
             case .success(let photos):
-                item.photoURL = photos.response?.photos?.items?[0].suffix ?? ""
+                if photos.response?.photos?.items?.isEmpty == false {
+                    item.photoURL = photos.response?.photos?.items?[0].suffix ?? ""
+                }
                 self?.view.refreshList()
             case .failure(_):
                 break
