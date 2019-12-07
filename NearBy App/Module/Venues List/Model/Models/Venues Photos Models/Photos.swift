@@ -16,7 +16,7 @@ import ObjectMapper
 
 struct Photos : Mappable {
 	var count : Int?
-	var items : [Items]?
+	var items : [PhotosItems]?
 	var dupesRemoved : Int?
 
 	init?(map: Map) {

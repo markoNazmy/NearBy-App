@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISceneDelegate {
@@ -26,7 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISceneDelegate {
         self.window!.rootViewController = rootViewController
         
         self.window!.makeKeyAndVisible()
+        
+        setupKingfisher()
         return true
+    }
+    
+    func setupKingfisher() {
+        ImageCache.default.maxMemoryCost = 1000
+        ImageCache.default.maxDiskCacheSize = 10000000
     }
     
 }

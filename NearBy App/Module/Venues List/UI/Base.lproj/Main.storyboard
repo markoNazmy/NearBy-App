@@ -37,13 +37,73 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xK0-wh-Jba">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error-image" translatesAutoresizingMaskIntoConstraints="NO" id="SGZ-Rt-P9g">
+                                        <rect key="frame" x="157" y="337" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3Bb-2K-rH1"/>
+                                            <constraint firstAttribute="width" constant="100" id="OOJ-WO-c8G"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAz-Ea-oa9">
+                                        <rect key="frame" x="20" y="457" width="374" height="23"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="SGZ-Rt-P9g" firstAttribute="centerY" secondItem="xK0-wh-Jba" secondAttribute="centerY" id="8UF-hw-SqZ"/>
+                                    <constraint firstItem="aAz-Ea-oa9" firstAttribute="top" secondItem="SGZ-Rt-P9g" secondAttribute="bottom" constant="20" id="FkW-kU-esk"/>
+                                    <constraint firstItem="SGZ-Rt-P9g" firstAttribute="centerX" secondItem="xK0-wh-Jba" secondAttribute="centerX" id="VHn-N9-yKT"/>
+                                    <constraint firstAttribute="trailing" secondItem="aAz-Ea-oa9" secondAttribute="trailing" constant="20" id="mkl-ul-uwV"/>
+                                    <constraint firstItem="aAz-Ea-oa9" firstAttribute="leading" secondItem="xK0-wh-Jba" secondAttribute="leading" constant="20" id="rYj-2f-OoQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-Gz-Oku">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-Image" translatesAutoresizingMaskIntoConstraints="NO" id="LLX-yg-FTV">
+                                        <rect key="frame" x="157" y="381" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="C1Q-p0-aii"/>
+                                            <constraint firstAttribute="width" constant="100" id="FKS-17-4cF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data found !!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-DM-MS6">
+                                        <rect key="frame" x="20" y="501" width="374" height="23"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="LLX-yg-FTV" firstAttribute="centerX" secondItem="wfP-Gz-Oku" secondAttribute="centerX" id="02C-ji-dwY"/>
+                                    <constraint firstAttribute="trailing" secondItem="FOY-DM-MS6" secondAttribute="trailing" constant="20" id="3WP-II-INb"/>
+                                    <constraint firstItem="FOY-DM-MS6" firstAttribute="top" secondItem="LLX-yg-FTV" secondAttribute="bottom" constant="20" id="7sr-Ur-Gqx"/>
+                                    <constraint firstItem="FOY-DM-MS6" firstAttribute="leading" secondItem="wfP-Gz-Oku" secondAttribute="leading" constant="20" id="JmB-gS-MmT"/>
+                                    <constraint firstItem="LLX-yg-FTV" firstAttribute="centerY" secondItem="wfP-Gz-Oku" secondAttribute="centerY" id="Ykm-Vr-Dbg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wfP-Gz-Oku" secondAttribute="bottom" id="3h4-Uj-LMo"/>
                             <constraint firstItem="t4I-YS-ToX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4h6-Jz-dJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xK0-wh-Jba" secondAttribute="bottom" id="Acl-7I-MPm"/>
+                            <constraint firstItem="xK0-wh-Jba" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FNI-X5-Ekk"/>
+                            <constraint firstItem="wfP-Gz-Oku" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fgu-VC-BBf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t4I-YS-ToX" secondAttribute="trailing" id="J7a-DR-EBY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t4I-YS-ToX" secondAttribute="bottom" id="MRW-Oo-1tA"/>
                             <constraint firstItem="t4I-YS-ToX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V8b-3l-t2P"/>
+                            <constraint firstItem="xK0-wh-Jba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bfr-z0-BNu"/>
+                            <constraint firstItem="wfP-Gz-Oku" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k8x-yn-5mp"/>
+                            <constraint firstItem="wfP-Gz-Oku" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kND-GK-TgA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xK0-wh-Jba" secondAttribute="trailing" id="ql6-Bu-aYO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -55,11 +115,24 @@
                                 <segment title="Single update"/>
                                 <segment title="Realtime"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentedControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="3SO-22-Nvb"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyView" destination="wfP-Gz-Oku" id="WWI-Yy-j1G"/>
+                        <outlet property="errorView" destination="xK0-wh-Jba" id="Ocu-rF-9Sd"/>
+                        <outlet property="segmentedControl" destination="Qaf-ou-m8f" id="sBN-5A-gyF"/>
+                        <outlet property="tableView" destination="t4I-YS-ToX" id="FGs-Bs-7J4"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="322" y="-254"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="empty-Image" width="170.5" height="170.5"/>
+        <image name="error-image" width="170.5" height="170.5"/>
+    </resources>
 </document>

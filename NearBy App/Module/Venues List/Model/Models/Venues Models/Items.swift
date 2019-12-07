@@ -14,16 +14,17 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 import ObjectMapper
 
-struct Items : Mappable {
+class Items : Mappable {
 	var reasons : Reasons?
 	var venue : Venue?
 	var referralId : String?
+    var photoURL: String?
 
-	init?(map: Map) {
+    required init?(map: Map) {
 
 	}
 
-	mutating func mapping(map: Map) {
+    func mapping(map: Map) {
 
 		reasons <- map["reasons"]
 		venue <- map["venue"]

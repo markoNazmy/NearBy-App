@@ -27,6 +27,7 @@ struct Location : Mappable {
 	var state : String?
 	var country : String?
 	var formattedAddress : [String]?
+    var neighborhood: String?
 
 	init?(map: Map) {
 
@@ -46,6 +47,7 @@ struct Location : Mappable {
 		state <- map["state"]
 		country <- map["country"]
 		formattedAddress <- map["formattedAddress"]
+        neighborhood <- map["neighborhood"]
 	}
 
 }

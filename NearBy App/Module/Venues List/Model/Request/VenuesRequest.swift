@@ -48,6 +48,6 @@ enum VenuesRequest: Request {
     }
     
     var cachePolicy: URLRequest.CachePolicy? {
-        return .reloadRevalidatingCacheData
+        return .returnCacheDataElseLoad
     }
 }

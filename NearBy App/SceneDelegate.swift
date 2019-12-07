@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -27,6 +28,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             self.window = window
             window.makeKeyAndVisible()
+            setupKingfisher()
         }
+    }
+    
+    func setupKingfisher() {
+        ImageCache.default.maxMemoryCost = 1000
+        ImageCache.default.maxDiskCacheSize = 10000000
     }
 }
