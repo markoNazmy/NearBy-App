@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import Result
 import CoreLocation
-import Reusable
 
 class VenuesViewController: UIViewController {
 
@@ -73,80 +71,4 @@ class VenuesViewController: UIViewController {
     @IBAction func segmentedControlTapped(_ sender: UISegmentedControl) {
         presenter.updateAppState(index: segmentedControl.selectedSegmentIndex)
     }
-}
-
-extension VenuesViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            if presenter.state == .singleUpdate {
-                locationManager.stopUpdatingLocation()
-            }
-            presenter.getVenues(latlang: "\(location.coordinate.latitude),\(location.coordinate.longitude)", shouldRefresh: true)
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
-    }
-}
-
-extension VenuesViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: VenueTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        let item = presenter.items[indexPath.row]
-        if item.photoURL == nil {
-            getItemPhoto(item: item, cell: cell)
-        }
-        cell.configure(item: item)
-        cell.configureImageView(item: item)
-        return cell
-    }
-    
-}
-
- 
-extension VenuesViewController: VenuesView {
-    func showErrorView() {
-        errorView.isHidden = false
-    }
-    
-    func hideErrorView() {
-        errorView.isHidden = true
-    }
-    
-    func showLoadingView() {
-        view.addSubview(activityIndicatorView)
-        activityIndicatorView.center = tableView.center
-        activityIndicatorView.startAnimating()
-    }
-    
-    func hideLoadingView() {
-        activityIndicatorView.removeFromSuperview()
-        activityIndicatorView.stopAnimating()
-    }
-    
-    func showEmptyStateView() {
-        emptyView.isHidden = false
-    }
-    
-    func hideEmptyStateView() {
-        emptyView.isHidden = true
-    }
-    
-    func refreshList() {
-        tableView.reloadData()
-    }
-    
-    func refreshListWithAnimation() {
-        tableView.reloadSections([0], with: .automatic)
-    }
-    
-    func refreshLoactionManager() {
-        refreshView()
-    }
-    
 }
