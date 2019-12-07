@@ -70,14 +70,14 @@ class VenuesPresenter {
         }
     }
     
-    func getVenuePhotos(item: Items) {
-        venuesPhotosUseCase.execute(venueId: item.venue?.id ?? "") {[weak self] (result) in
+    func getVenuePhotos(item: Items, cell: VenueTableViewCell) {
+        venuesPhotosUseCase.execute(venueId: item.venue?.id ?? "") {(result) in
             switch result {
             case .success(let photos):
                 if photos.response?.photos?.items?.isEmpty == false {
                     item.photoURL = photos.response?.photos?.items?[0].suffix ?? ""
                 }
-                self?.view.refreshList()
+                cell.configureImageView(item: item)
             case .failure(_):
                 break
             }

@@ -88,8 +88,8 @@ class NetworkManager {
         
         // Base URL should be defined in the client if not already in the request.
         
-        let client_id = "CIGGO3HI35ECWORC3WWNE4NRNEIATKDYCQAZH3YWA3OB0WQL"
-        let client_secret = "DBDIUXZJBRN3ZQBN21ID40VOEKYPZVX0M4PT0MYMWVGEN5X4"
+        let client_id = "ZL2GD13BR3OUXZXKWBLCWLE3SG4IWLNYN5SLYW54DF3TGOE3"
+        let client_secret = "1YAVAPF2WJXFRHGCMNOS2MYY3TTDNBYKLWQZRSLADIAA54HG"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyymmdd"
         let todayDate = dateFormatter.string(from: Date())

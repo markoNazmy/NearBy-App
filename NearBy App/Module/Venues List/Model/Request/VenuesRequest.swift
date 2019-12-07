@@ -43,7 +43,7 @@ enum VenuesRequest: Request {
                     "offest": offest]
         case .getPhotos:
             return ["limit": 1,
-                    "offest": 1]
+                    "offest": 0]
         }
     }
     

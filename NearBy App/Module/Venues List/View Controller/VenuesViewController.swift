@@ -66,8 +66,8 @@ class VenuesViewController: UIViewController {
         locationManager.requestLocation()
     }
     
-    func getItemPhoto(item: Items) {
-        presenter.getVenuePhotos(item: item)
+    func getItemPhoto(item: Items, cell: VenueTableViewCell) {
+        presenter.getVenuePhotos(item: item, cell: cell)
     }
     
     @IBAction func segmentedControlTapped(_ sender: UISegmentedControl) {
@@ -98,11 +98,11 @@ extension VenuesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: VenueTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         let item = presenter.items[indexPath.row]
-        let address: String = item.venue?.location?.formattedAddress.flatMap({ return "\($0) " }) ?? ""
         if item.photoURL == nil {
-            getItemPhoto(item: item)
+            getItemPhoto(item: item, cell: cell)
         }
-        cell.configure(title: "\(item.venue?.name ?? "")", address: address, imageID: item.photoURL)
+        cell.configure(item: item)
+        cell.configureImageView(item: item)
         return cell
     }
     
