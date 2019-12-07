@@ -320,11 +320,11 @@
 				70CA8684239991F60066EA88 /* Common */,
 				70CA866F239991F60066EA88 /* Module */,
 				70CA863F239977790066EA88 /* AppDelegate.swift */,
+				70B15653239AC41300918881 /* SceneDelegate.swift */,
 				709849B52399B991008527D0 /* Bridging-Header.h */,
 				70CA86482399777A0066EA88 /* Assets.xcassets */,
 				70CA864A2399777A0066EA88 /* LaunchScreen.storyboard */,
 				70CA864D2399777A0066EA88 /* Info.plist */,
-				70B15653239AC41300918881 /* SceneDelegate.swift */,
 			);
 			path = "NearBy App";
 			sourceTree = "<group>";
